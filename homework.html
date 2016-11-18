@@ -15,20 +15,36 @@
 		  href="styles.css"
 	      />	
 
+
+
 	</head>
 	<body>
-		<h1>Randy Shaver</h1>
+		<h1><b><i>Randy Shaver</i></b></h1>
 		<br>
 		<div class="row">
 			<div class="col-sm-4">
-				<<img id="ptable" src="images.jfif" alt="">
+				<img id="ptable" onclick="clptable()" src="images.jfif" alt="">
+				<p>Click on image to change it!!</p>
 			</div>
 			<div class="col-sm-8">
 				<p>My Background is in Chemistry and I have a Bachelor's and a Master's Degree from many years ago.</p>
 				<p>After spending many years doing research with heavy metals or testing urine samples, I had to make a change so I have been studying web design.  I have so many interests that I cannot name them all, but to start a few are gardening, electronics, computers and operating systems, Of course, I enjoy gaming and programming.  A more recent interest is related to improving my health and has forced me to start exercising at the YMCA regularly.  From many years in the laboratory, I could not continue living a sedentary lifestyle.</p>
 			</div>
 		</div>
-		
+			      <script>
+	      	var istable = true;
+	      	function clptable(){
+	      		// alert("clicked="+istable);
+	      		if (istable){
+	      			$("#ptable").attr('src', "compsci.jfif"); 
+	      		}else {
+	      			$("#ptable").attr('src', "images.jfif"); 
+	      		}
+	      		istable = !istable;
+
+	      	};
+
+	      </script>
 	
 	</body>
 </html>
